@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="Robot">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import Robot urdf file -->
+    <xacro:include filename="$(find urdf_tutorial)/urdf/Robot.urdf" />
+
+    <xacro:include filename="$(find realsense2_description)/urdf/_d435i.urdf.xacro"/>
+
+    <xacro:sensor_d435i parent="joint1_base">
+        <origin xyz="0.5 0.0 1.0" rpy="0 0 0" />
+    </xacro:sensor_d435i>
+    <!-- Import control_xacro -->
+    <xacro:include filename="Robot.ros2_control.xacro" />
+
+
+    <xacro:Robot_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+    
+</robot>

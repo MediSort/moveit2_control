@@ -1,0 +1,116 @@
+digraph G {
+node [shape=box];
+"joint1_base" [label="joint1_base"];
+"joint1_reducer_belt" [label="joint1_reducer_belt"];
+"joint2_base" [label="joint2_base"];
+"joint1_reducer_pulley2" [label="joint1_reducer_pulley2"];
+"joint2_frame" [label="joint2_frame"];
+"joint2_reducer_pulley2" [label="joint2_reducer_pulley2"];
+"Link_B" [label="Link_B"];
+"joint3_base" [label="joint3_base"];
+"joint3_left_belt" [label="joint3_left_belt"];
+"joint3_left_pulley1" [label="joint3_left_pulley1"];
+"joint3_right_belt" [label="joint3_right_belt"];
+"joint3_right_pulley1" [label="joint3_right_pulley1"];
+"joint3_frame" [label="joint3_frame"];
+"joint3_miter_gear_left" [label="joint3_miter_gear_left"];
+"joint3_left_pulley2" [label="joint3_left_pulley2"];
+"joint3_miter_gear_right" [label="joint3_miter_gear_right"];
+"joint3_right_pulley2" [label="joint3_right_pulley2"];
+"Link_A" [label="Link_A"];
+"joint3_miter_gear_center" [label="joint3_miter_gear_center"];
+"joint4_base" [label="joint4_base"];
+"joint4_left_belt" [label="joint4_left_belt"];
+"joint4_left_pulley1" [label="joint4_left_pulley1"];
+"joint4_right_belt" [label="joint4_right_belt"];
+"joint4_right_pulley1" [label="joint4_right_pulley1"];
+"joint4_frame" [label="joint4_frame"];
+"joint4_miter_gear_left" [label="joint4_miter_gear_left"];
+"joint4_left_pulley2" [label="joint4_left_pulley2"];
+"joint4_miter_gear_right" [label="joint4_miter_gear_right"];
+"joint4_right_pulley2" [label="joint4_right_pulley2"];
+"mounting_plate" [label="mounting_plate"];
+"joint4_miter_gear_center" [label="joint4_miter_gear_center"];
+"Part7_1" [label="Part7_1"];
+"Part3_1" [label="Part3_1"];
+"Part3_2" [label="Part3_2"];
+"Part7_2" [label="Part7_2"];
+"joint2_reducer_belt" [label="joint2_reducer_belt"];
+"joint2_reducer_pulley1" [label="joint2_reducer_pulley1"];
+"joint1_reducer_pulley1" [label="joint1_reducer_pulley1"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"joint1_base" -> "joint1_base_base_belt" [label="xyz: -7.36678e-19 -3.10692e-09 0.0225 \nrpy: -3.14159 -2.4381e-17 -7.57723e-18"]
+"joint1_base_base_belt" -> "joint1_reducer_belt"
+"joint1_base" -> "joint1_base_joint1" [label="xyz: -1.27416e-18 -4.63617e-09 0.04 \nrpy: -3.14159 -2.4381e-17 -7.57723e-18"]
+"joint1_base_joint1" -> "joint2_base"
+"joint2_base" -> "joint2_base_joint1_gear" [label="xyz: 0 0 0 \nrpy: 1.5708 -4.12443e-33 3.99933e-34"]
+"joint2_base_joint1_gear" -> "joint1_reducer_pulley2"
+"joint2_base" -> "joint2_base_joint2" [label="xyz: 6.62197e-40 -1.4e-07 -0.205 \nrpy: 0 1.5708 3.14159"]
+"joint2_base_joint2" -> "joint2_frame"
+"joint2_frame" -> "joint2_frame_joint2_gear" [label="xyz: -3.55271e-17 -1.68558e-17 -0.06 \nrpy: -2.4223e-16 -1.52596e-33 -1.05879e-22"]
+"joint2_frame_joint2_gear" -> "joint2_reducer_pulley2"
+"joint2_frame" -> "joint2_frame_joint2_linkB" [label="xyz: 0.065 4e-08 -9.68922e-24 \nrpy: 0 1.5708 -1.5708"]
+"joint2_frame_joint2_linkB" -> "Link_B"
+"Link_B" -> "Link_B_linkB_joint3" [label="xyz: 1.44425e-35 0.095 -7e-08 \nrpy: -1.5708 1.23324e-32 4.50955e-34"]
+"Link_B_linkB_joint3" -> "joint3_base"
+"joint3_base" -> "joint3_base_joint3_left_belt" [label="xyz: 0.055 3e-08 0.05 \nrpy: 0 -1.5708 -6.48873e-36"]
+"joint3_base_joint3_left_belt" -> "joint3_left_belt"
+"joint3_base" -> "joint3_base_joint3_left_in" [label="xyz: 0.055 3e-08 0.05 \nrpy: 0 -1.5708 -6.48873e-36"]
+"joint3_base_joint3_left_in" -> "joint3_left_pulley1"
+"joint3_base" -> "joint3_base_joint3_right_belt" [label="xyz: -0.055 3e-08 0.05 \nrpy: 0 -1.5708 3.14159"]
+"joint3_base_joint3_right_belt" -> "joint3_right_belt"
+"joint3_base" -> "joint3_base_joint3_right_in" [label="xyz: -0.055 3e-08 0.05 \nrpy: 0 -1.5708 3.14159"]
+"joint3_base_joint3_right_in" -> "joint3_right_pulley1"
+"joint3_base" -> "joint3_base_joint3_y" [label="xyz: 2.02146e-32 1.3e-07 0.205 \nrpy: 0 -1.5708 3.14159"]
+"joint3_base_joint3_y" -> "joint3_frame"
+"joint3_frame" -> "joint3_frame_joint3_left_miter_gear" [label="xyz: -7.10543e-17 -1.15763e-17 0.055 \nrpy: -3.14159 3.33283e-33 1.05879e-22"]
+"joint3_frame_joint3_left_miter_gear" -> "joint3_miter_gear_left"
+"joint3_frame" -> "joint3_frame_joint3_left_pulley2" [label="xyz: -7.10543e-17 -1.26287e-17 0.06 \nrpy: -3.14159 3.33283e-33 1.05879e-22"]
+"joint3_frame_joint3_left_pulley2" -> "joint3_left_pulley2"
+"joint3_frame" -> "joint3_frame_joint3_right_miter_gear" [label="xyz: -7.10543e-17 1.1576e-17 -0.055 \nrpy: 3.96696e-16 3.33283e-33 1.05879e-22"]
+"joint3_frame_joint3_right_miter_gear" -> "joint3_miter_gear_right"
+"joint3_frame" -> "joint3_frame_joint3_right_pulley2" [label="xyz: -7.10543e-17 1.26284e-17 -0.06 \nrpy: 2.4223e-16 3.33283e-33 1.05879e-22"]
+"joint3_frame_joint3_right_pulley2" -> "joint3_right_pulley2"
+"joint3_frame" -> "joint3_frame_joint3_z" [label="xyz: 0.065 -4e-08 -9.68922e-24 \nrpy: 0 -1.5708 -1.5708"]
+"joint3_frame_joint3_z" -> "Link_A"
+"Link_A" -> "Link_A_joint3_center_miter_gear" [label="xyz: 0 0 -1.35525e-22 \nrpy: 1.5708 9.86077e-32 -3.59043e-34"]
+"Link_A_joint3_center_miter_gear" -> "joint3_miter_gear_center"
+"Link_A" -> "Link_A_linkA_joint4" [label="xyz: -9.25537e-36 0.095 -7e-08 \nrpy: -1.5708 9.86077e-32 -3.59043e-34"]
+"Link_A_linkA_joint4" -> "joint4_base"
+"joint4_base" -> "joint4_base_joint4_left_belt" [label="xyz: 0.055 3e-08 0.05 \nrpy: 0 -1.5708 -9.40395e-38"]
+"joint4_base_joint4_left_belt" -> "joint4_left_belt"
+"joint4_base" -> "joint4_base_joint4_left_in" [label="xyz: 0.055 3e-08 0.05 \nrpy: 0 -1.5708 -9.40395e-38"]
+"joint4_base_joint4_left_in" -> "joint4_left_pulley1"
+"joint4_base" -> "joint4_base_joint4_right_belt" [label="xyz: -0.055 3e-08 0.05 \nrpy: 0 -1.5708 3.14159"]
+"joint4_base_joint4_right_belt" -> "joint4_right_belt"
+"joint4_base" -> "joint4_base_joint4_right_in" [label="xyz: -0.055 3e-08 0.05 \nrpy: 0 -1.5708 3.14159"]
+"joint4_base_joint4_right_in" -> "joint4_right_pulley1"
+"joint4_base" -> "joint4_base_joint4_y" [label="xyz: -1.24146e-41 1.3e-07 0.205 \nrpy: 0 -1.5708 3.14159"]
+"joint4_base_joint4_y" -> "joint4_frame"
+"joint4_frame" -> "joint4_frame_joint4_left_miter_gear" [label="xyz: -1.42109e-16 -1.15766e-17 0.055 \nrpy: -3.14159 -1.25134e-32 -2.63383e-48"]
+"joint4_frame_joint4_left_miter_gear" -> "joint4_miter_gear_left"
+"joint4_frame" -> "joint4_frame_joint4_left_pulley2" [label="xyz: -1.42109e-16 -1.26291e-17 0.06 \nrpy: -3.14159 -1.25134e-32 -2.63383e-48"]
+"joint4_frame_joint4_left_pulley2" -> "joint4_left_pulley2"
+"joint4_frame" -> "joint4_frame_joint4_right_miter_gear" [label="xyz: -1.42109e-16 1.15763e-17 -0.055 \nrpy: 3.96696e-16 -1.25134e-32 -2.63383e-48"]
+"joint4_frame_joint4_right_miter_gear" -> "joint4_miter_gear_right"
+"joint4_frame" -> "joint4_frame_joint4_right_pulley2" [label="xyz: -1.42109e-16 1.26288e-17 -0.06 \nrpy: 2.4223e-16 -1.25134e-32 -2.63383e-48"]
+"joint4_frame_joint4_right_pulley2" -> "joint4_right_pulley2"
+"joint4_frame" -> "joint4_frame_joint4_z" [label="xyz: 0.065 -4e-08 -9.68922e-24 \nrpy: 0 -1.5708 -1.5708"]
+"joint4_frame_joint4_z" -> "mounting_plate"
+"mounting_plate" -> "mounting_plate_joint4_center_miter_gear" [label="xyz: 0 0 0 \nrpy: 3.14159 -3.86328e-50 -9.56926e-35"]
+"mounting_plate_joint4_center_miter_gear" -> "joint4_miter_gear_center"
+"mounting_plate" -> "mounting_plate_mount_gripper" [label="xyz: 3.88995e-34 0.01 0.011 \nrpy: -4.03717e-16 -3.86328e-50 -9.56926e-35"]
+"mounting_plate_mount_gripper" -> "Part7_1"
+"Part7_1" -> "Part7_1_gripper_frame1" [label="xyz: -0.006 0.011 -0.00800001 \nrpy: -3.14159 -3.3409e-52 -3.15539e-30"]
+"Part7_1_gripper_frame1" -> "Part3_1"
+"Part3_1" -> "Part3_1_gripper_base" [label="xyz: 0.012 0 0.003 \nrpy: -1.5708 3.15544e-30 -3.15065e-30"]
+"Part3_1_gripper_base" -> "Part3_2"
+"Part3_2" -> "Part3_2_gripper_frame2" [label="xyz: -0.012 -0.003 1e-08 \nrpy: -1.05879e-22 8.43196e-33 0"]
+"Part3_2_gripper_frame2" -> "Part7_2"
+"joint2_base" -> "joint2_base_joint2_belt" [label="xyz: 0.055 -4e-08 -0.05 \nrpy: 0 1.5708 -3.14159"]
+"joint2_base_joint2_belt" -> "joint2_reducer_belt"
+"joint2_base" -> "joint2_base_joint2_in" [label="xyz: 0.055 -4e-08 -0.05 \nrpy: 0 1.5708 -3.14159"]
+"joint2_base_joint2_in" -> "joint2_reducer_pulley1"
+"joint1_base" -> "joint1_base_joint1_in" [label="xyz: -5.52736e-18 -0.15 0.0225 \nrpy: -3.14159 -2.4381e-17 -7.57723e-18"]
+"joint1_base_joint1_in" -> "joint1_reducer_pulley1"
+}
